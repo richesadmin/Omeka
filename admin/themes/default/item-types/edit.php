@@ -11,7 +11,7 @@ echo head(['title'=> $title,'bodyclass'=>'item-types']);
 echo flash();
 ?>
 
-<form method="post" action="">
+<form autocomplete="off" method="post" action="">
     <?php include 'form.php';?>
     <section class="three columns omega">
         <div id="save" class="panel">

@@ -2,7 +2,7 @@
 echo head(['title' => __('Add New User'), 'bodyclass' => 'users']);
 echo flash();
 ?>
-<form method="post">
+<form autocomplete="off" method="post">
 <section class="seven columns alpha">
     <?php echo $this->form; ?>
     <?php fire_plugin_hook('admin_users_form', ['form' => $form, 'view' => $this]); ?>

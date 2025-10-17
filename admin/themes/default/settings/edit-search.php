@@ -3,7 +3,7 @@ echo head(['title' => __('Settings'), 'bodyclass'=>'settings edit-search']);
 echo common('settings-nav');
 echo flash();
 ?>
-<form method="post" class="search-record-types">
+<form autocomplete="off" method="post" class="search-record-types">
     <section class="seven columns alpha">
         <div class="field">
             <div class="two columns alpha">

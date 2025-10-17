@@ -6,7 +6,7 @@ echo head(['title'=>$pageTitle, 'bodyclass'=>'settings']); ?>
 
 <?php echo flash(); ?>
 
-<form id="appearance-form" method="post">
+<form autocomplete="off" id="appearance-form" method="post">
 
 <section class="seven columns alpha">
         

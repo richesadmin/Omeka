@@ -3,7 +3,7 @@ $pageTitle = __('Configure Plugin: %s', $plugin->getDisplayName());
 echo head(['title' => $pageTitle, 'bodyclass' => 'plugins']);
 echo flash();
 ?>
-<form method="post">
+<form autocomplete="off" method="post">
     <section class="seven columns alpha">
         <?php echo $pluginBroker->callHook('config_form', ['view' => $this], $plugin); ?>
     </section>

@@ -44,7 +44,7 @@ echo flash();
         <div class="six columns alpha">
             <h2>
             <?php if ($plugin->getLinkUrl()): ?>
-                <a href="<?php echo html_escape($plugin->getLinkUrl()); ?>" target="_blank"><?php echo html_escape($displayName); ?></a>
+                <a href="<?php echo html_escape($plugin->getLinkUrl()); ?>" target="_blank" rel="noreferrer"><?php echo html_escape($displayName); ?></a>
             <?php else: ?>
                 <?php echo html_escape($displayName); ?>
             <?php endif; ?>
@@ -102,7 +102,7 @@ echo flash();
                 <?php if ($plugin->isInstalled()): ?>
                     <?php if ($needsUpgrade): ?>
                         <?php if (is_allowed('Plugins', 'upgrade')): ?>
-                            <form action="<?php echo html_escape(url('plugins/upgrade')); ?>" method="post" accept-charset="utf-8">     
+                            <form autocomplete="off" action="<?php echo html_escape(url('plugins/upgrade')); ?>" method="post" accept-charset="utf-8">     
                                 <li></li>
                                 <li></li>
                                 <li>
@@ -122,7 +122,7 @@ echo flash();
                         </li>
                         <li>
                         <?php if (!$cannotLoad): ?>
-                            <form action="<?php echo html_escape(url('plugins/' . $activateOrDeactivate)); ?>" method="post" accept-charset="utf-8">
+                            <form autocomplete="off" action="<?php echo html_escape(url('plugins/' . $activateOrDeactivate)); ?>" method="post" accept-charset="utf-8">
                             <button name="<?php echo $activateOrDeactivate; ?>" type="submit" class="<?php echo ($plugin->isActive()) ? 'red' : 'green'; ?> button"><?php echo ($plugin->isActive()) ? __('Deactivate') : __('Activate'); ?></button>
                             <input type="hidden" name="name" value="<?php echo html_escape($plugin->name); ?>" />
                             <?php echo $csrf; ?>
@@ -132,7 +132,7 @@ echo flash();
                     <?php endif; ?>
                         <li>
                     <?php if (is_allowed($plugin, 'uninstall') && !$cannotLoad): ?>
-                            <form action="<?php echo html_escape(url(['controller' => 'plugins', 'action' => 'uninstall'], 'default')); ?>" method="post" accept-charset="utf-8">
+                            <form autocomplete="off" action="<?php echo html_escape(url(['controller' => 'plugins', 'action' => 'uninstall'], 'default')); ?>" method="post" accept-charset="utf-8">
 
                             <button name="uninstall" type="submit" class="uninstall red button"><?php echo __('Uninstall'); ?></button>
                             <input type="hidden" name="name" value="<?php echo html_escape($plugin->name); ?>" />
@@ -146,7 +146,7 @@ echo flash();
                         <li></li>
                         <li></li>
                         <li>
-                            <form action="<?php echo html_escape(url('plugins/install')); ?>" method="post" accept-charset="utf-8">
+                            <form autocomplete="off" action="<?php echo html_escape(url('plugins/install')); ?>" method="post" accept-charset="utf-8">
                             <button name="install" type="submit" class="install green button"<?php if ($cannotLoad): ?> disabled="disabled"<?php endif; ?>><?php echo __('Install'); ?></button>
                             <input type="hidden" name="name" value="<?php echo html_escape($plugin->name); ?>" />
                             <?php echo $csrf; ?>

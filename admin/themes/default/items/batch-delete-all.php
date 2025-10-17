@@ -9,7 +9,7 @@ endif;
 ?>
 <div title="<?php echo $title; ?>">
 
-<form id="batch-edit-form" action="<?php echo html_escape(url('items/batch-edit-save')); ?>" method="post" accept-charset="utf-8">
+<form autocomplete="off" id="batch-edit-form" action="<?php echo html_escape(url('items/batch-edit-save')); ?>" method="post" accept-charset="utf-8">
     <section class="seven columns alpha">
         <fieldset class="panel">
             <?php

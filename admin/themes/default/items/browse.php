@@ -19,7 +19,7 @@ echo item_search_filters();
     <?php echo link_to_item_search(__('Search Items'), ['class' => 'blue full-width-mobile advanced-search-link button']); ?>
     <?php echo common('quick-filters', [], 'items'); ?>
 
-    <form action="<?php echo html_escape(url('items/batch-edit')); ?>" method="post" accept-charset="utf-8">
+    <form autocomplete="off" action="<?php echo html_escape(url('items/batch-edit')); ?>" method="post" accept-charset="utf-8">
         <div class="table-actions batch-edit-option">
             <?php if (is_allowed('Items', 'edit') || is_allowed('Items', 'delete')): ?>
                 <button class="small button batch-all-toggle" type="button" data-records-count="<?php echo $total_results; ?>"><?php echo __('Select all %s results', $total_results); ?></button>

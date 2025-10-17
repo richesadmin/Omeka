@@ -10,7 +10,7 @@ echo head(['title' => $userTitle, 'bodyclass' => 'users']);
 echo common('users-nav', ['user' => $user]);
 echo flash();
 ?>
-<form method="post">
+<form autocomplete="off" method="post">
 <section class="seven columns alpha">
     <?php echo $this->form; ?>
 </section>

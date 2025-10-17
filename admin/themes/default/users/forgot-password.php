@@ -11,7 +11,7 @@ echo head(['title' => $pageTitle, 'bodyclass' => 'login'], $header);
 <p><?php echo __('Enter your email address to retrieve your password.'); ?></p>
 
 <div class="eight columns alpha offset-by-one">
-<form method="post" accept-charset="utf-8">
+<form autocomplete="off" method="post" accept-charset="utf-8">
     <div class="field">    
         <div class="inputs six columns offset-by-one omega">
             <?php echo $this->formText('email', @$_POST['email'], ['required' => 'required']); ?>

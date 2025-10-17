@@ -4,7 +4,7 @@ echo head(['title' => __('Settings'), 'bodyclass'=>'settings edit-item-type-elem
 echo common('settings-nav');
 echo flash();
 ?>
-<form method="post" id="edit-item-type-elements">
+<form autocomplete="off" method="post" id="edit-item-type-elements">
     <section class="seven columns alpha">
         <p class="explanation">
         <?php

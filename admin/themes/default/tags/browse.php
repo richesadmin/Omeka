@@ -28,7 +28,7 @@ echo flash();
 
 <?php $tagsSectionClass = ($canEdit) ? 'seven' : 'ten alpha'; ?>
 
-<form id="search-tags" method="GET" class="<?php echo $tagsSectionClass; ?> columns omega">
+<form autocomplete="off" id="search-tags" method="GET" class="<?php echo $tagsSectionClass; ?> columns omega">
     <input type="text" name="like" aria-labelledby="search-tags-button"/>
     <button class="green button" type="submit" id="search-tags-button"><?php echo __('Search tags'); ?></button>
     <?php if(isset($params['type'])): ?>

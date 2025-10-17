@@ -4,7 +4,7 @@ include 'form-tabs.php';
 echo flash();
 ?>
 
-<form method="post" enctype="multipart/form-data" id="collection-form" action="">
+<form autocomplete="off" method="post" enctype="multipart/form-data" id="collection-form" action="">
     <?php include 'form.php'; ?>
     <section class="three columns omega">
         <div id="save" class="panel">

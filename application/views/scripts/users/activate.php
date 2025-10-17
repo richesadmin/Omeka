@@ -8,7 +8,7 @@ echo head(['title' => $pageTitle], $header);
 <h2><?php echo html_escape(__('Hello %s. Your username is %s', $user->name, $user->username)); ?></h2>
 
 
-<form method="post">
+<form autocomplete="off" method="post">
     <fieldset>
     <div class="field">
     <?php echo $this->formLabel('new_password1', __('Create a Password')); ?>

@@ -31,7 +31,7 @@ echo flash();
         <?php echo link_to('users', 'add', __('Add a User'), ['class'=>'green button']); ?>
     <?php endif; ?>
 
-<form id='search-users' method='GET'>
+<form autocomplete="off" id='search-users' method='GET'>
     <input type='text' name='search' aria-labelledby="search-users-button" />
     <fieldset>
         <legend class="sr-only"><?php echo __('Options'); ?></legend>

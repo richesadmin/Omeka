@@ -8,7 +8,7 @@ endif;
 $formAttributes['method'] = 'GET';
 ?>
 
-<form <?php echo tag_attributes($formAttributes); ?>>
+<form autocomplete="off" <?php echo tag_attributes($formAttributes); ?>>
     <div id="search-keywords" class="field">
         <?php echo $this->formLabel('keyword-search', __('Search for Keywords')); ?>
         <div class="inputs">

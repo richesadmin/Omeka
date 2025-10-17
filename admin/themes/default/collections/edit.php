@@ -14,13 +14,13 @@ include 'form-tabs.php';
 echo flash();
 ?>
 
-<form method="post" enctype="multipart/form-data" id="collection-form" action="">
+<form autocomplete="off" method="post" enctype="multipart/form-data" id="collection-form" action="">
     <?php include 'form.php'; ?>
 
     <section class="three columns omega">
         <div id="save" class="panel">
             <input type="submit" name="submit" class="green full-width button" id="save-changes" value="<?php echo __('Save Changes'); ?>" />
-            <a href="<?php echo html_escape(public_url('collections/show/'.metadata('collection', 'id'))); ?>" class="full-width blue button" target="_blank"><?php echo __('View Public Page'); ?></a>
+            <a href="<?php echo html_escape(public_url('collections/show/'.metadata('collection', 'id'))); ?>" class="full-width blue button" target="_blank" rel="noreferrer"><?php echo __('View Public Page'); ?></a>
             <?php if (is_allowed($collection, 'delete')): ?>
                 <?php echo link_to_collection(__('Delete'), ['class' => 'full-width red button delete-confirm'], 'delete-confirm'); ?>
             <?php endif; ?>

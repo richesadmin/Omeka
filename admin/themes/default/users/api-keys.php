@@ -11,7 +11,7 @@ echo common('users-nav', ['user' => $user]);
 echo flash();
 ?>
 <section class="seven columns alpha">
-<form method="post" action="">
+<form autocomplete="off" method="post" action="">
     <fieldset>
         <legend><?php echo __('API Keys'); ?></legend>
         <div class="field">

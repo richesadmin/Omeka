@@ -7,7 +7,7 @@ endif;
 $formAttributes['method'] = 'GET';
 ?>
 
-<form <?php echo tag_attributes($formAttributes); ?>>
+<form autocomplete="off" <?php echo tag_attributes($formAttributes); ?>>
     <div class="seven columns alpha">
     <div id="search-keywords" class="field">
         <div class="two columns alpha">

@@ -3,7 +3,7 @@ echo head(['title' => __('Settings'), 'bodyclass'=>'settings edit-api']);
 echo common('settings-nav');
 echo flash();
 ?>
-<form method="post">
+<form autocomplete="off" method="post">
     <h2>Configure API</h2>
     <section class="seven columns alpha">
         <div class="field">

@@ -6,7 +6,7 @@ echo head(['title'=>$pageTitle, 'bodyclass'=>'settings']); ?>
 
 <?php echo common('appearance-nav'); ?>
 <?php echo flash(); ?>
-<form action="<?php echo $this->form->getAction() ?>"
+<form autocomplete="off" action="<?php echo $this->form->getAction() ?>"
       enctype="<?php echo $this->form->getEnctype() ?>"
       method="<?php echo $this->form->getMethod() ?>"
       id="<?php echo $this->form->getId() ?>"
